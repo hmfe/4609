@@ -1,12 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import axios from 'axios';
 
 const googleApiKey = process.env.REACT_APP_GOOGLE_API_KEY;
 const apiUrl = `https://www.googleapis.com/books/v1/volumes?key=${googleApiKey}`;
-const apiUrl2 = `https://maps.googleapis.com/maps/api/place/autocomplete/json?`;
 
 const KEY_CODES = {
+	TAB: 9,
 	ENTER: 13,
 	UP_ARROW: 38,
 	DOWN_ARROW: 40
@@ -38,9 +37,6 @@ class SearchBar extends React.Component {
 					//Update the state with the new results
 					this.setState({ suggestions: suggestions, showSuggestions: true });
 				}
-				else {
-					//No results found
-				}
 			})	
 		}
 		else {
@@ -53,6 +49,13 @@ class SearchBar extends React.Component {
 	onKeyDown = e => {
 		const { activeSuggestion, suggestions} = this.state;
 		const { addSearchToHistory } = this.props;
+
+		//User pressed the tab key
+		if(e.keyCode === KEY_CODES.TAB) {
+			//Move the selected item one step down
+			if(activeSuggestion === suggestions.length - 1) return;
+			this.setState({ activeSuggestion: activeSuggestion + 1 });
+		}
 
 		//User pressed the enter key
 		if(e.keyCode === KEY_CODES.ENTER) {
