@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  padding-top: 50px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+input {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  width: 90%;
+  display: inline-block;
+  max-width: 600px;
+}
+.suggestion-list {
+  border: 1px solid #999;
+  border-top-width: 0;
+  list-style: none;
+  margin-top: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-left: 0;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+.suggestion-list li {
+  padding: 0.5rem;
+}
+.suggestion-active,
+.suggestion-list li:hover {
+  background-color: #efefef;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.suggestion-list li:not(:last-of-type) {
+  border-bottom: 1px solid #999;
+}
+
+.search-history {
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
+  margin: auto;
+  max-width: 600px;
+  text-align: left;
+}
+.search-history li {
+  border-bottom: #999 1px solid;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.search-history li .history-search-text {
+  max-width: 70%;
+}
+.search-history li time {
+  width: 30%;
+  text-align: right;
+}
+.link-button {
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
+  transition: all 0.2s;
+}
+.link-button:focus {
+  outline: none;
+}
+.link-button:hover {
+  color: #999999;
+  transition: all 0.2s;
+}
+.search-history-top {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: auto;
+  border-bottom: #999 1px solid;
+}
+.remove-btn{
+  text-decoration: none;
+}
+time {
+  font-size: 75%;
+  color: #999;
+}
