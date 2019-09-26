@@ -3,6 +3,7 @@ import './App.css';
 
 import SearchBar from './components/SearchBar';
 import SearchHistory from './components/SearchHistory';
+import Button from './components/Button';
 
 class App extends React.Component {
   
@@ -35,6 +36,7 @@ class App extends React.Component {
           clearSearchHistory={this.clearSearchHistory}
           removeSearchHistoryEntry={this.removeSearchHistoryEntry}
         />
+        <Button />
       </div>
     );
   }

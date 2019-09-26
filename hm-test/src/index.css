@@ -14,6 +14,32 @@ code {
     monospace;
 }
 
+/* TASK 1 */
+.fancy-button {
+  border: #858585 solid 1px;
+  background: linear-gradient(to right, #F4B05D, #F19639);
+  margin-top: 50px;
+  width: 95px;
+  height: 45px;
+  font-weight: bold;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+}
+.fancy-button::after {
+  content: '\2716';
+  /* content: '\2620'; */
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  background-color: #fff;
+  border-radius: 69%;
+  padding: 8px 12px;
+}
+.fancy-button:focus {
+  outline: none;
+}
+
 input {
   border: 1px solid #999;
   padding: 0.5rem;
