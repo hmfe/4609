@@ -1,0 +1,26 @@
+.fancy-button {
+  border: #858585 solid 1px;
+  background: linear-gradient(to right, #F4B05D, #F19639);
+  margin-top: 50px;
+  padding: 20px 10px;
+  padding-right: 50px;
+  font-weight: bold;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+}
+.fancy-button::after {
+  content: '\2716';
+  position: absolute;
+  right: 5px;
+  top: 11px;
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  border-radius: 50%;
+  line-height: 35px;
+  text-align: center;
+}
+.fancy-button:focus {
+  outline: none;
+}

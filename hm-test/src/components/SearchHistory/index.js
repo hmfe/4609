@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './style.css';
+
 class SearchHistory extends React.Component {
 
 	render() {
@@ -14,9 +16,10 @@ class SearchHistory extends React.Component {
 					<li key={index}>
 						<span className="history-search-text">{search.text}</span>
 						<div>
-							<time>{formatDate(search.date)}</time>
+							<time dateTime={formatDate(search.date)}>{formatDate(search.date)}</time>
 							<button 
 								className="link-button remove-btn"
+								aria-label="Remove"
 								onClick={(index) => this.props.removeSearchHistoryEntry(index)}>X</button>
 						</div>
 					</li>

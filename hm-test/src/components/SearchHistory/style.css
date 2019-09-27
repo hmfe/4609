@@ -1,0 +1,51 @@
+
+.search-history {
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
+  margin: auto;
+  max-width: 600px;
+  text-align: left;
+}
+.search-history li {
+  border-bottom: #999 1px solid;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.search-history li .history-search-text {
+  max-width: 70%;
+}
+.search-history li time {
+  width: 30%;
+  text-align: right;
+}
+.link-button {
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
+  transition: all 0.2s;
+}
+.link-button:focus {
+  outline: none;
+}
+.link-button:hover {
+  color: #999999;
+  transition: all 0.2s;
+}
+.search-history-top {
+  display: flex;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: auto;
+  border-bottom: #999 1px solid;
+}
+.remove-btn{
+  text-decoration: none;
+}
+time {
+  font-size: 75%;
+  color: #999;
+}

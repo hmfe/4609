@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 
+import './style.css';
+
 const googleApiKey = process.env.REACT_APP_GOOGLE_API_KEY;
 const apiUrl = `https://www.googleapis.com/books/v1/volumes?key=${googleApiKey}`;
 
@@ -137,6 +139,7 @@ class SearchBar extends React.Component {
 						<li
 							className={className}
 							key={index}
+							tabIndex={index}
 							onClick={this.onClick}
 						>
 							{suggestion}
