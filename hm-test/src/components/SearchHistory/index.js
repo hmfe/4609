@@ -46,6 +46,11 @@ class SearchHistory extends React.Component {
 
 function formatDate(date) {
 	
+	const year = date.getFullYear();
+	const month = date.getMonth() + 1; 		//The count for month starts at 0
+	let day = date.getDate() 
+	day = day < 10 ? '0'+day : day;
+
 	let hours = date.getHours();
 	let minutes = date.getMinutes();
 	
@@ -54,7 +59,7 @@ function formatDate(date) {
 	hours = hours % 12;
 	minutes = minutes < 10 ? '0'+minutes : minutes;
 
-	return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}, ${hours}:${minutes} ${ampm}`; 
+	return `${year}-${month}-${day}, ${hours}:${minutes} ${ampm}`; 
 }
 
 export default SearchHistory;
