@@ -1,0 +1,32 @@
+input {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  width: 90%;
+  display: inline-block;
+  max-width: 600px;
+}
+.suggestion-list {
+  border: 1px solid #999;
+  border-top-width: 0;
+  list-style: none;
+  margin-top: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-left: 0;
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+.suggestion-list li {
+  padding: 0.5rem;
+}
+.suggestion-active,
+.suggestion-list li:hover {
+  background-color: #efefef;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.suggestion-list li:not(:last-of-type) {
+  border-bottom: 1px solid #999;
+}
